@@ -191,6 +191,8 @@ export default function AboutHeitor() {
             </div>
 
             <div className="relative min-h-[420px] overflow-hidden">
+              <div className="absolute inset-x-[8%] inset-y-[8%] rounded-[34px] bg-[linear-gradient(180deg,#102a68_0%,#0a1638_58%,#09111f_100%)] shadow-[0_24px_80px_rgba(0,0,0,0.34)]" />
+              <div className="absolute inset-x-[10%] inset-y-[10%] rounded-[30px] border border-[#60a5fa]/16 bg-[radial-gradient(circle_at_50%_24%,rgba(96,165,250,0.18),transparent_24%),linear-gradient(180deg,rgba(7,15,32,0.12)_0%,rgba(7,15,32,0.02)_100%)]" />
               <div className="absolute inset-x-[10%] bottom-6 h-[1px] border-b border-dashed border-[#2563eb]/30 [border-image:linear-gradient(90deg,transparent,rgba(37,99,235,0.36),transparent)_1]" />
               <motion.div
                 initial={{ opacity: 0, y: 30, rotate: -10 }}
@@ -308,6 +310,8 @@ export default function AboutHeitor() {
             </div>
 
             <div className="relative">
+              <div className="absolute -left-12 top-20 -z-10 h-40 w-40 rounded-full bg-[#ff3b30]/10 blur-3xl" />
+              <div className="absolute right-10 top-0 -z-10 h-32 w-32 rounded-full bg-[#7f1d1d]/12 blur-3xl" />
               <div className="pointer-events-none absolute right-0 top-0 hidden select-none font-display text-[150px] leading-none text-white/[0.04] xl:block">
                 NEXURA
               </div>

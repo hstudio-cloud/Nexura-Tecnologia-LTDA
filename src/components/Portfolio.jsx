@@ -55,6 +55,7 @@ const projects = [
 function ProjectCard({ project, index }) {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, margin: '-40px' })
+  const isNano = project.title === 'Nano IA'
 
   return (
     <motion.div
@@ -70,6 +71,19 @@ function ProjectCard({ project, index }) {
           className="absolute inset-0"
           style={{ background: `radial-gradient(ellipse at center, ${project.color}15, transparent 70%)` }}
         />
+        {isNano && (
+          <>
+            <div
+              className="absolute left-[-10%] top-[10%] h-28 w-28 opacity-80"
+              style={{
+                background: 'linear-gradient(180deg, rgba(255,59,48,0.26) 0%, rgba(127,29,29,0.08) 100%)',
+                clipPath: 'polygon(50% 0%, 78% 0%, 58% 38%, 100% 38%, 48% 100%, 0% 100%, 26% 54%, 0% 54%)',
+                filter: 'drop-shadow(0 0 28px rgba(255,59,48,0.24))',
+              }}
+            />
+            <div className="absolute right-[8%] bottom-[14%] h-20 w-20 rounded-full bg-[#ff3b30]/12 blur-2xl" />
+          </>
+        )}
         <span
           className="font-display text-7xl font-800 opacity-[0.07] select-none"
           style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, color: project.color }}
