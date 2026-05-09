@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ArrowUpRight } from 'lucide-react'
+import nexuraLogo from '../assets/nexura-logo.png'
 
 const WA_LINK = 'https://wa.me/5584999422597?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Nexura%20e%20quero%20fazer%20um%20or%C3%A7amento.'
 
@@ -37,7 +38,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between gap-4">
         <a href="#inicio" className="group flex items-center">
           <img
-            src="/nexura-logo.png"
+            src={nexuraLogo}
             alt="Nexura Tecnologia LTDA"
             className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02] sm:h-14"
           />

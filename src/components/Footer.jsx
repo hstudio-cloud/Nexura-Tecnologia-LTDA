@@ -1,6 +1,7 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { ArrowUpRight, MapPin, Instagram } from 'lucide-react'
+import nexuraLogo from '../assets/nexura-logo.png'
 
 const WA_LINK = 'https://wa.me/5584999422597?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Nexura%20e%20quero%20fazer%20um%20or%C3%A7amento.'
 
@@ -44,7 +45,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="mb-5">
               <img
-                src="/nexura-logo.png"
+                src={nexuraLogo}
                 alt="Nexura Tecnologia LTDA"
                 className="h-20 w-auto object-contain"
               />

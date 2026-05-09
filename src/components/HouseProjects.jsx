@@ -3,8 +3,8 @@ import { useRef } from 'react'
 import { CheckCircle, AlertCircle, ArrowUpRight } from 'lucide-react'
 
 const WA_LINK = 'https://wa.me/5584999422597?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Nexura%20e%20quero%20saber%20sobre%20projetos%20de%20casas.'
-const HOUSE_RED = '#ef4444'
-const HOUSE_RED_SOFT = '#f87171'
+const HOUSE_PURPLE = '#a855f7'
+const HOUSE_PURPLE_SOFT = '#c084fc'
 
 const items = [
   'Planta baixa conceitual',
@@ -24,7 +24,7 @@ export default function HouseProjects() {
       <div className="absolute inset-0 bg-nexura-dark" />
       <div
         className="absolute inset-0"
-        style={{ background: 'radial-gradient(ellipse 70% 60% at 10% 60%, rgba(239,68,68,0.08) 0%, transparent 60%)' }}
+        style={{ background: 'radial-gradient(ellipse 70% 60% at 10% 60%, rgba(168,85,247,0.10) 0%, transparent 60%)' }}
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
@@ -35,9 +35,9 @@ export default function HouseProjects() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            <span className="section-label mb-4 block" style={{ color: HOUSE_RED_SOFT }}>
+            <span className="section-label mb-4 block" style={{ color: HOUSE_PURPLE_SOFT }}>
               <span
-                style={{ background: HOUSE_RED_SOFT, display: 'inline-block', width: '20px', height: '1px', marginRight: '8px' }}
+                style={{ background: HOUSE_PURPLE_SOFT, display: 'inline-block', width: '20px', height: '1px', marginRight: '8px' }}
               />
               Projetos residenciais
             </span>
@@ -49,7 +49,7 @@ export default function HouseProjects() {
               Projetos de casas para quem já tem terreno e quer{' '}
               <span
                 style={{
-                  background: `linear-gradient(135deg, ${HOUSE_RED_SOFT}, ${HOUSE_RED})`,
+                  background: `linear-gradient(135deg, ${HOUSE_PURPLE_SOFT}, ${HOUSE_PURPLE})`,
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
@@ -70,7 +70,7 @@ export default function HouseProjects() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 btn-primary text-sm"
-              style={{ background: `linear-gradient(135deg, ${HOUSE_RED}, ${HOUSE_RED_SOFT})` }}
+              style={{ background: `linear-gradient(135deg, ${HOUSE_PURPLE}, ${HOUSE_PURPLE_SOFT})` }}
             >
               <span>Solicitar anteprojeto</span>
               <ArrowUpRight size={16} />
@@ -82,7 +82,7 @@ export default function HouseProjects() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="card-glass rounded-2xl p-8 border" style={{ borderColor: 'rgba(239,68,68,0.18)' }}>
+            <div className="card-glass rounded-2xl p-8 border" style={{ borderColor: 'rgba(168,85,247,0.22)' }}>
               <h3
                 className="font-display text-lg font-700 text-white mb-6"
                 style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700 }}
@@ -99,7 +99,7 @@ export default function HouseProjects() {
                     transition={{ duration: 0.4, delay: 0.3 + i * 0.08 }}
                     className="flex items-start gap-3"
                   >
-                    <CheckCircle size={18} className="flex-shrink-0 mt-0.5" style={{ color: HOUSE_RED_SOFT }} />
+                    <CheckCircle size={18} className="flex-shrink-0 mt-0.5" style={{ color: HOUSE_PURPLE_SOFT }} />
                     <span className="text-white/75 text-sm font-body leading-relaxed">{item}</span>
                   </motion.li>
                 ))}
@@ -107,9 +107,9 @@ export default function HouseProjects() {
 
               <div
                 className="mt-8 p-4 rounded-xl flex items-start gap-3"
-                style={{ background: 'rgba(239,68,68,0.07)', border: '1px solid rgba(239,68,68,0.18)' }}
+                style={{ background: 'rgba(168,85,247,0.08)', border: '1px solid rgba(168,85,247,0.20)' }}
               >
-                <AlertCircle size={16} className="flex-shrink-0 mt-0.5" style={{ color: HOUSE_RED_SOFT, opacity: 0.85 }} />
+                <AlertCircle size={16} className="flex-shrink-0 mt-0.5" style={{ color: HOUSE_PURPLE_SOFT, opacity: 0.85 }} />
                 <p className="text-white/40 text-xs leading-relaxed font-body">
                   Os materiais gerados pela Nexura são estudos iniciais e devem ser validados por
                   engenheiro ou arquiteto habilitado antes da execução.

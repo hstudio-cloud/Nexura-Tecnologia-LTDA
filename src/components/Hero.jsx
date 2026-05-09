@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { ArrowUpRight, Globe, Home, Users, ChevronDown } from 'lucide-react'
+import nexuraLogo from '../assets/nexura-logo.png'
 
 const WA_LINK = 'https://wa.me/5584999422597?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Nexura%20e%20quero%20fazer%20um%20or%C3%A7amento.'
 
@@ -124,7 +125,7 @@ export default function Hero() {
               <div className="relative z-10 text-center p-8">
                 <div className="mx-auto mb-5 flex justify-center">
                   <img
-                    src="/nexura-logo.png"
+                    src={nexuraLogo}
                     alt="Nexura Tecnologia LTDA"
                     className="w-full max-w-[360px] object-contain drop-shadow-[0_0_24px_rgba(0,229,255,0.14)]"
                   />
