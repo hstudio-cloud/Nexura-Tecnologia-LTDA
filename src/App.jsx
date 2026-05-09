@@ -1,5 +1,6 @@
 import Header from './components/Header'
 import Hero from './components/Hero'
+import AboutHeitor from './components/AboutHeitor'
 import Manifesto from './components/Manifesto'
 import Services from './components/Services'
 import HouseProjects from './components/HouseProjects'
@@ -16,6 +17,7 @@ export default function App() {
       <Header />
       <main>
         <Hero />
+        <AboutHeitor />
         <Manifesto />
         <Services />
         <HouseProjects />

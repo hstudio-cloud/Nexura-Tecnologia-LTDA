@@ -3,7 +3,8 @@ import { useRef } from 'react'
 import { ArrowUpRight, MapPin, Instagram } from 'lucide-react'
 import nexuraLogo from '../assets/nexura-logo.png'
 
-const WA_LINK = 'https://wa.me/5584999422597?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Nexura%20e%20quero%20fazer%20um%20or%C3%A7amento.'
+const WA_LINK =
+  'https://wa.me/5584999422597?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Nexura%20e%20quero%20fazer%20um%20or%C3%A7amento.'
 
 function WhatsAppIcon({ size = 18 }) {
   return (
@@ -14,8 +15,9 @@ function WhatsAppIcon({ size = 18 }) {
 }
 
 const quickLinks = [
-  { label: 'Início', href: '#inicio' },
-  { label: 'Serviços', href: '#servicos' },
+  { label: 'Inicio', href: '#inicio' },
+  { label: 'Sobre', href: '#heitor' },
+  { label: 'Servicos', href: '#servicos' },
   { label: 'Projetos', href: '#portfolio' },
   { label: 'Processo', href: '#processo' },
   { label: 'Casas', href: '#casas' },
@@ -27,54 +29,50 @@ export default function Footer() {
   const inView = useInView(ref, { once: true, margin: '-40px' })
 
   return (
-    <footer className="relative pt-16 pb-8 overflow-hidden">
+    <footer className="relative overflow-hidden pb-8 pt-16">
       <div className="absolute inset-0 bg-nexura-dark" />
       <div
-        className="absolute top-0 left-0 right-0 h-px"
+        className="absolute left-0 right-0 top-0 h-px"
         style={{ background: 'linear-gradient(90deg, transparent, rgba(255,59,48,0.16), transparent)' }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-nexura-border/40"
+          className="grid gap-10 border-b border-nexura-border/40 pb-12 sm:grid-cols-2 lg:grid-cols-4"
         >
           <div className="lg:col-span-2">
             <div className="mb-5">
-              <img
-                src={nexuraLogo}
-                alt="Nexura Tecnologia LTDA"
-                className="h-20 w-auto object-contain"
-              />
+              <img src={nexuraLogo} alt="Nexura Tecnologia LTDA" className="h-20 w-auto object-contain" />
             </div>
-            <p className="text-white/40 text-sm leading-relaxed font-body max-w-xs mb-5">
-              Tecnologia, sites e projetos para negócios locais em Assú/RN e região.
-              Da ideia digital ao anteprojeto de casa.
+            <p className="mb-5 max-w-xs font-body text-sm leading-relaxed text-white/40">
+              Tecnologia, sites e projetos para negocios locais em Assu/RN e regiao. Da ideia digital ao anteprojeto
+              de casa.
             </p>
-            <div className="flex items-center gap-2 text-white/35 text-xs font-mono">
+            <div className="flex items-center gap-2 font-mono text-xs text-white/35">
               <MapPin size={12} className="text-nexura-cyan/50" />
-              Assú/RN • Brasil
+              Assu/RN • Brasil
             </div>
           </div>
 
           <div>
             <h4
-              className="font-display text-sm font-700 text-white mb-4 uppercase tracking-widest"
+              className="mb-4 font-display text-sm font-700 uppercase tracking-widest text-white"
               style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: '11px' }}
             >
-              Links rápidos
+              Links rapidos
             </h4>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-white/40 text-sm font-body hover:text-nexura-cyan transition-colors duration-200 flex items-center gap-1 group"
+                    className="group flex items-center gap-1 font-body text-sm text-white/40 transition-colors duration-200 hover:text-nexura-cyan"
                   >
-                    <span className="w-0 group-hover:w-3 h-px bg-nexura-cyan transition-all duration-200" />
+                    <span className="h-px w-0 bg-nexura-cyan transition-all duration-200 group-hover:w-3" />
                     {link.label}
                   </a>
                 </li>
@@ -84,7 +82,7 @@ export default function Footer() {
 
           <div>
             <h4
-              className="font-display text-sm font-700 text-white mb-4 uppercase tracking-widest"
+              className="mb-4 font-display text-sm font-700 uppercase tracking-widest text-white"
               style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: '11px' }}
             >
               Contato
@@ -94,30 +92,30 @@ export default function Footer() {
                 href={WA_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2.5 text-white/40 hover:text-nexura-cyan transition-colors duration-200 text-sm font-body group"
+                className="group flex items-center gap-2.5 font-body text-sm text-white/40 transition-colors duration-200 hover:text-nexura-cyan"
               >
                 <WhatsAppIcon size={16} />
                 <span>WhatsApp</span>
-                <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                <ArrowUpRight size={12} className="opacity-0 transition-opacity group-hover:opacity-100" />
               </a>
-              <p className="pl-6 text-xs text-white/30 font-mono">(84) 9 9942-2597</p>
+              <p className="pl-6 font-mono text-xs text-white/30">(84) 9 9942-2597</p>
               <a
                 href="https://instagram.com/nexura"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2.5 text-white/40 hover:text-nexura-cyan transition-colors duration-200 text-sm font-body group"
+                className="group flex items-center gap-2.5 font-body text-sm text-white/40 transition-colors duration-200 hover:text-nexura-cyan"
               >
                 <Instagram size={16} />
                 <span>Instagram</span>
-                <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                <ArrowUpRight size={12} className="opacity-0 transition-opacity group-hover:opacity-100" />
               </a>
             </div>
           </div>
         </motion.div>
 
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-white/25 text-xs font-mono">© 2026 Nexura. Todos os direitos reservados.</p>
-          <p className="text-white/20 text-xs font-body">Feito com dedicação em Assú/RN</p>
+        <div className="flex flex-col items-center justify-between gap-3 pt-8 sm:flex-row">
+          <p className="font-mono text-xs text-white/25">© 2026 Nexura. Todos os direitos reservados.</p>
+          <p className="font-body text-xs text-white/20">Feito com dedicacao em Assu/RN</p>
         </div>
       </div>
     </footer>

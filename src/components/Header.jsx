@@ -3,11 +3,13 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ArrowUpRight } from 'lucide-react'
 import nexuraMarkHeader from '../assets/nexura-mark-header.png'
 
-const WA_LINK = 'https://wa.me/5584999422597?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Nexura%20e%20quero%20fazer%20um%20or%C3%A7amento.'
+const WA_LINK =
+  'https://wa.me/5584999422597?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Nexura%20e%20quero%20fazer%20um%20or%C3%A7amento.'
 
 const navLinks = [
-  { label: 'Início', href: '#inicio' },
-  { label: 'Serviços', href: '#servicos' },
+  { label: 'Inicio', href: '#inicio' },
+  { label: 'Sobre', href: '#heitor' },
+  { label: 'Servicos', href: '#servicos' },
   { label: 'Projetos', href: '#portfolio' },
   { label: 'Processo', href: '#processo' },
   { label: 'Casas', href: '#casas' },
@@ -29,13 +31,13 @@ export default function Header() {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed left-0 right-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-nexura-dark/90 backdrop-blur-xl border-b border-nexura-border/50 py-3'
+          ? 'border-b border-nexura-border/50 bg-nexura-dark/90 py-3 backdrop-blur-xl'
           : 'bg-transparent py-5'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between gap-4">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
         <a href="#inicio" className="group flex items-center">
           <img
             src={nexuraMarkHeader}
@@ -44,28 +46,28 @@ export default function Header() {
           />
         </a>
 
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden items-center gap-1 lg:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="px-4 py-2 font-body text-sm text-white/60 hover:text-white transition-colors duration-200 rounded-md hover:bg-white/5"
+              className="rounded-md px-4 py-2 font-body text-sm text-white/60 transition-colors duration-200 hover:bg-white/5 hover:text-white"
             >
               {link.label}
             </a>
           ))}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-3">
-          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary text-sm py-2.5 px-5">
-            <span>Solicitar orçamento</span>
+        <div className="hidden items-center gap-3 lg:flex">
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary px-5 py-2.5 text-sm">
+            <span>Solicitar orcamento</span>
             <ArrowUpRight size={14} />
           </a>
         </div>
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="lg:hidden p-2 text-white/70 hover:text-white transition-colors"
+          className="p-2 text-white/70 transition-colors hover:text-white lg:hidden"
           aria-label="Menu"
         >
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}
@@ -79,9 +81,9 @@ export default function Header() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-nexura-dark/98 backdrop-blur-xl border-t border-nexura-border/50 overflow-hidden"
+            className="overflow-hidden border-t border-nexura-border/50 bg-nexura-dark/98 backdrop-blur-xl lg:hidden"
           >
-            <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
+            <div className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4">
               {navLinks.map((link, i) => (
                 <motion.a
                   key={link.href}
@@ -90,7 +92,7 @@ export default function Header() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05 }}
                   onClick={() => setMobileOpen(false)}
-                  className="py-3 px-4 text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-all font-body text-sm"
+                  className="rounded-lg px-4 py-3 font-body text-sm text-white/70 transition-all hover:bg-white/5 hover:text-white"
                 >
                   {link.label}
                 </motion.a>
@@ -101,7 +103,7 @@ export default function Header() {
                 rel="noopener noreferrer"
                 className="btn-primary mt-3 justify-center text-sm"
               >
-                <span>Solicitar orçamento</span>
+                <span>Solicitar orcamento</span>
                 <ArrowUpRight size={14} />
               </a>
             </div>
