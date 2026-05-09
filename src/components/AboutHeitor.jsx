@@ -3,6 +3,8 @@ import { useRef } from 'react'
 import { ArrowUpRight } from 'lucide-react'
 import heitorCutout from '../assets/heitor-cutout.png'
 import nexuraMarkHeader from '../assets/nexura-mark-header.png'
+import nanoPreview from '../assets/site-previews/nano-preview.png'
+import startfitPreview from '../assets/site-previews/startfit-preview.png'
 
 const WA_LINK =
   'https://wa.me/5584999422597?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Nexura%20e%20quero%20falar%20com%20Heitor.'
@@ -215,13 +217,13 @@ export default function AboutHeitor() {
                   y: { duration: 5.6, delay: 0.12, repeat: Infinity, ease: 'easeInOut' },
                   rotate: { duration: 5.6, delay: 0.12, repeat: Infinity, ease: 'easeInOut' },
                 }}
-                className="absolute left-[12%] top-[18%] w-[220px] rounded-[28px] border border-white/10 bg-gradient-to-br from-[#10141f] to-[#09090c] p-4 shadow-[0_24px_70px_rgba(0,0,0,0.34)]"
+                className="absolute left-[12%] top-[18%] w-[220px] rounded-[28px] border border-white/10 bg-gradient-to-br from-[#10141f] to-[#09090c] p-3 shadow-[0_24px_70px_rgba(0,0,0,0.34)]"
               >
-                <div className="mb-3 h-36 rounded-[20px] bg-[radial-gradient(circle_at_60%_20%,rgba(255,59,48,0.26),transparent_30%),linear-gradient(180deg,#181d29_0%,#0b0e15_100%)]" />
-                <div className="space-y-2">
-                  <div className="h-2 w-20 rounded-full bg-white/70" />
-                  <div className="h-2 w-28 rounded-full bg-white/20" />
-                  <div className="mt-4 h-10 rounded-2xl bg-[#7c3aed]/18" />
+                <div className="overflow-hidden rounded-[22px] border border-white/8 bg-[#0b0e15]">
+                  <div
+                    className="h-[250px] bg-cover bg-top bg-no-repeat"
+                    style={{ backgroundImage: `url(${nanoPreview})` }}
+                  />
                 </div>
               </motion.div>
 
@@ -241,17 +243,13 @@ export default function AboutHeitor() {
                   y: { duration: 6.2, delay: 0.2, repeat: Infinity, ease: 'easeInOut' },
                   rotate: { duration: 6.2, delay: 0.2, repeat: Infinity, ease: 'easeInOut' },
                 }}
-                className="absolute right-[10%] top-[6%] w-[230px] rounded-[28px] border border-white/10 bg-gradient-to-br from-[#121823] to-[#09090c] p-4 shadow-[0_24px_70px_rgba(0,0,0,0.34)]"
+                className="absolute right-[10%] top-[6%] w-[230px] rounded-[28px] border border-white/10 bg-gradient-to-br from-[#121823] to-[#09090c] p-3 shadow-[0_24px_70px_rgba(0,0,0,0.34)]"
               >
-                <div className="mb-3 flex h-40 items-end rounded-[20px] bg-[radial-gradient(circle_at_52%_24%,rgba(34,197,94,0.24),transparent_30%),linear-gradient(180deg,#171b24_0%,#0b0e15_100%)] p-4">
-                  <div className="grid gap-2">
-                    <div className="h-2 w-24 rounded-full bg-white/75" />
-                    <div className="h-2 w-16 rounded-full bg-white/25" />
-                  </div>
-                </div>
-                <div className="grid gap-2">
-                  <div className="h-10 rounded-2xl bg-[#22c55e]/14" />
-                  <div className="h-10 rounded-2xl bg-white/[0.03]" />
+                <div className="overflow-hidden rounded-[22px] border border-white/8 bg-[#0b0e15]">
+                  <div
+                    className="h-[270px] bg-cover bg-top bg-no-repeat"
+                    style={{ backgroundImage: `url(${startfitPreview})` }}
+                  />
                 </div>
               </motion.div>
 
