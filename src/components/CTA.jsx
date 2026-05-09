@@ -1,9 +1,8 @@
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { ArrowUpRight, MessageSquare } from 'lucide-react'
 
-const WA_LINK = 'https://wa.me/5584997070028?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Nexura%20e%20quero%20fazer%20um%20or%C3%A7amento.'
+const WA_LINK = 'https://wa.me/5584999422597?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Nexura%20e%20quero%20fazer%20um%20or%C3%A7amento.'
 
 export default function CTA() {
   const ref = useRef(null)
@@ -20,11 +19,14 @@ export default function CTA() {
         }}
       />
 
-      {/* Decorative lines */}
-      <div className="absolute top-0 left-0 right-0 h-px"
-        style={{ background: 'linear-gradient(90deg, transparent, rgba(0,229,255,0.2), transparent)' }} />
-      <div className="absolute bottom-0 left-0 right-0 h-px"
-        style={{ background: 'linear-gradient(90deg, transparent, rgba(0,229,255,0.1), transparent)' }} />
+      <div
+        className="absolute top-0 left-0 right-0 h-px"
+        style={{ background: 'linear-gradient(90deg, transparent, rgba(0,229,255,0.2), transparent)' }}
+      />
+      <div
+        className="absolute bottom-0 left-0 right-0 h-px"
+        style={{ background: 'linear-gradient(90deg, transparent, rgba(0,229,255,0.1), transparent)' }}
+      />
 
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
         <motion.div
@@ -34,17 +36,17 @@ export default function CTA() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="flex flex-col items-center gap-7"
         >
-          {/* Glow icon */}
           <div className="w-16 h-16 rounded-2xl flex items-center justify-center border border-nexura-cyan/25 bg-nexura-cyan/8 animate-glow">
             <MessageSquare size={28} className="text-nexura-cyan" />
           </div>
 
           <div>
             <span className="section-label mb-4 inline-flex justify-center">Vamos começar</span>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-800 leading-tight mt-2"
-              style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800 }}>
-              Vamos construir algo{' '}
-              <span className="text-gradient">profissional para sua ideia?</span>
+            <h2
+              className="font-display text-3xl sm:text-4xl lg:text-5xl font-800 leading-tight mt-2"
+              style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800 }}
+            >
+              Vamos construir algo <span className="text-gradient">profissional para sua ideia?</span>
             </h2>
           </div>
 
@@ -65,7 +67,7 @@ export default function CTA() {
           </div>
 
           <p className="font-mono text-xs text-white/25 tracking-wide">
-            Sem burocracia • Resposta em até 24h • Assú/RN e região
+            (84) 9 9942-2597 • Resposta em até 24h • Assú/RN e região
           </p>
         </motion.div>
       </div>

@@ -1,11 +1,9 @@
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { ArrowUpRight, MapPin, Instagram } from 'lucide-react'
 
-const WA_LINK = 'https://wa.me/5584997070028?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Nexura%20e%20quero%20fazer%20um%20or%C3%A7amento.'
+const WA_LINK = 'https://wa.me/5584999422597?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Nexura%20e%20quero%20fazer%20um%20or%C3%A7amento.'
 
-// WhatsApp SVG icon
 function WhatsAppIcon({ size = 18 }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
@@ -30,8 +28,10 @@ export default function Footer() {
   return (
     <footer className="relative pt-16 pb-8 overflow-hidden">
       <div className="absolute inset-0 bg-nexura-dark" />
-      <div className="absolute top-0 left-0 right-0 h-px"
-        style={{ background: 'linear-gradient(90deg, transparent, rgba(0,229,255,0.12), transparent)' }} />
+      <div
+        className="absolute top-0 left-0 right-0 h-px"
+        style={{ background: 'linear-gradient(90deg, transparent, rgba(0,229,255,0.12), transparent)' }}
+      />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
@@ -41,16 +41,13 @@ export default function Footer() {
           transition={{ duration: 0.6 }}
           className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-nexura-border/40"
         >
-          {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="flex flex-col mb-4">
-              <span className="font-display text-2xl font-800 tracking-tight text-white"
-                style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800 }}>
-                NEXURA
-              </span>
-              <span className="font-mono text-[9px] text-nexura-cyan/50 tracking-[0.25em] uppercase">
-                Tecnologia • Sites • Projetos
-              </span>
+            <div className="mb-5">
+              <img
+                src="/nexura-logo.png"
+                alt="Nexura Tecnologia LTDA"
+                className="h-20 w-auto object-contain"
+              />
             </div>
             <p className="text-white/40 text-sm leading-relaxed font-body max-w-xs mb-5">
               Tecnologia, sites e projetos para negócios locais em Assú/RN e região.
@@ -62,17 +59,20 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick links */}
           <div>
-            <h4 className="font-display text-sm font-700 text-white mb-4 uppercase tracking-widest"
-              style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: '11px' }}>
+            <h4
+              className="font-display text-sm font-700 text-white mb-4 uppercase tracking-widest"
+              style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: '11px' }}
+            >
               Links rápidos
             </h4>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href}
-                    className="text-white/40 text-sm font-body hover:text-nexura-cyan transition-colors duration-200 flex items-center gap-1 group">
+                  <a
+                    href={link.href}
+                    className="text-white/40 text-sm font-body hover:text-nexura-cyan transition-colors duration-200 flex items-center gap-1 group"
+                  >
                     <span className="w-0 group-hover:w-3 h-px bg-nexura-cyan transition-all duration-200" />
                     {link.label}
                   </a>
@@ -81,22 +81,31 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
-            <h4 className="font-display text-sm font-700 text-white mb-4 uppercase tracking-widest"
-              style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: '11px' }}>
+            <h4
+              className="font-display text-sm font-700 text-white mb-4 uppercase tracking-widest"
+              style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700, fontSize: '11px' }}
+            >
               Contato
             </h4>
             <div className="space-y-3">
-              <a href={WA_LINK} target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-2.5 text-white/40 hover:text-nexura-cyan transition-colors duration-200 text-sm font-body group">
+              <a
+                href={WA_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2.5 text-white/40 hover:text-nexura-cyan transition-colors duration-200 text-sm font-body group"
+              >
                 <WhatsAppIcon size={16} />
                 <span>WhatsApp</span>
                 <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
               </a>
-              {/* NOTE: substitua o link do Instagram quando disponível */}
-              <a href="https://instagram.com/nexura" target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-2.5 text-white/40 hover:text-nexura-cyan transition-colors duration-200 text-sm font-body group">
+              <p className="pl-6 text-xs text-white/30 font-mono">(84) 9 9942-2597</p>
+              <a
+                href="https://instagram.com/nexura"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2.5 text-white/40 hover:text-nexura-cyan transition-colors duration-200 text-sm font-body group"
+              >
                 <Instagram size={16} />
                 <span>Instagram</span>
                 <ArrowUpRight size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -105,14 +114,9 @@ export default function Footer() {
           </div>
         </motion.div>
 
-        {/* Bottom bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-white/25 text-xs font-mono">
-            © 2026 Nexura. Todos os direitos reservados.
-          </p>
-          <p className="text-white/20 text-xs font-body">
-            Feito com dedicação em Assú/RN
-          </p>
+          <p className="text-white/25 text-xs font-mono">© 2026 Nexura. Todos os direitos reservados.</p>
+          <p className="text-white/20 text-xs font-body">Feito com dedicação em Assú/RN</p>
         </div>
       </div>
     </footer>

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ArrowUpRight } from 'lucide-react'
 
-const WA_LINK = 'https://wa.me/5584997070028?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Nexura%20e%20quero%20fazer%20um%20or%C3%A7amento.'
+const WA_LINK = 'https://wa.me/5584999422597?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Nexura%20e%20quero%20fazer%20um%20or%C3%A7amento.'
 
 const navLinks = [
   { label: 'Início', href: '#inicio' },
@@ -34,19 +34,15 @@ export default function Header() {
           : 'bg-transparent py-5'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
-        {/* Logo */}
-        <a href="#inicio" className="flex flex-col leading-none group">
-          <span className="font-display text-2xl font-800 tracking-tight text-white group-hover:text-gradient transition-all duration-300"
-            style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800 }}>
-            NEXURA
-          </span>
-          <span className="font-mono text-[9px] text-nexura-cyan/60 tracking-[0.25em] uppercase">
-            Tecnologia • Sites • Projetos
-          </span>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between gap-4">
+        <a href="#inicio" className="group flex items-center">
+          <img
+            src="/nexura-logo.png"
+            alt="Nexura Tecnologia LTDA"
+            className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02] sm:h-14"
+          />
         </a>
 
-        {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-1">
           {navLinks.map((link) => (
             <a
@@ -59,7 +55,6 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* CTA */}
         <div className="hidden lg:flex items-center gap-3">
           <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary text-sm py-2.5 px-5">
             <span>Solicitar orçamento</span>
@@ -67,7 +62,6 @@ export default function Header() {
           </a>
         </div>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="lg:hidden p-2 text-white/70 hover:text-white transition-colors"
@@ -77,7 +71,6 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
