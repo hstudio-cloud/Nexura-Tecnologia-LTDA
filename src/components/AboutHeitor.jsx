@@ -2,7 +2,6 @@ import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { ArrowUpRight } from 'lucide-react'
 import heitorCutout from '../assets/heitor-cutout.png'
-import nexuraLogo from '../assets/nexura-logo.png'
 import nexuraMarkHeader from '../assets/nexura-mark-header.png'
 
 const WA_LINK =
@@ -22,14 +21,24 @@ const heitorFocus = ['visual premium', 'tecnologia moderna', 'estrategia digital
 function InfoCard({ label, title, description, items, ctaLabel, ctaHref }) {
   return (
     <div className="rounded-[28px] border border-[#ff3b30]/15 bg-gradient-to-br from-[#180a0c] via-[#100d14] to-[#09090c] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.22)] lg:p-7">
-      <span className="mb-3 block font-mono text-[10px] uppercase tracking-[0.28em] text-[#ff7d75]">{label}</span>
       <h3
-        className="mb-4 max-w-xl font-display text-3xl leading-tight text-white sm:text-4xl"
+        className="mb-3 font-display text-3xl leading-tight text-white sm:text-4xl"
         style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800 }}
       >
-        {title}
+        {label}
       </h3>
-      <p className="mb-6 max-w-2xl font-body text-base leading-relaxed text-white/55">{description}</p>
+      <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.28em] text-[#ff7d75]">{title}</span>
+      <h3
+        className="mb-4 max-w-xl font-display text-2xl leading-tight text-white sm:text-3xl"
+        style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700 }}
+      >
+        {description}
+      </h3>
+      <p className="mb-6 max-w-2xl font-body text-base leading-relaxed text-white/55">
+        A Nexura Tecnologia Ltda nasceu com o objetivo de transformar ideias em solucoes digitais modernas,
+        estrategicas e de alto impacto. Mais do que criar sites ou sistemas, a Nexura desenvolve experiencias digitais
+        pensadas para gerar presenca, autoridade e crescimento real para empresas e marcas.
+      </p>
 
       <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
         {items.map((item) => (
@@ -74,29 +83,18 @@ export default function AboutHeitor() {
           className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16"
         >
           <div className="relative min-h-[420px] overflow-hidden rounded-[28px] border border-white/5 bg-gradient-to-br from-[#130a0b] via-[#100d14] to-[#09090c]">
-            <div
-              className="absolute left-[-24px] top-8 h-[320px] w-[280px] opacity-90"
-              style={{
-                background:
-                  'linear-gradient(180deg, rgba(255,59,48,0.34) 0%, rgba(127,29,29,0.18) 48%, rgba(69,10,10,0.12) 100%)',
-                clipPath:
-                  'polygon(50% 0%, 78% 0%, 58% 38%, 100% 38%, 48% 100%, 0% 100%, 26% 54%, 0% 54%)',
-                filter: 'drop-shadow(0 0 42px rgba(255,59,48,0.34))',
-              }}
-            />
             <div className="absolute right-[10%] top-[14%] h-40 w-40 rounded-full bg-[#ff3b30]/10 blur-3xl" />
             <img
-              src={nexuraLogo}
-              alt="Nexura Tecnologia LTDA"
-              className="absolute left-1/2 top-1/2 z-10 w-[420px] max-w-[82%] -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[0_24px_64px_rgba(0,0,0,0.42)]"
+              src={nexuraMarkHeader}
+              alt="Nexura"
+              className="absolute left-1/2 top-1/2 z-10 w-[420px] max-w-none -translate-x-1/2 -translate-y-1/2 object-contain opacity-[0.94] drop-shadow-[0_24px_64px_rgba(0,0,0,0.42)] sm:w-[520px]"
             />
-            <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[#09090c] via-[#09090cd0] to-transparent" />
           </div>
 
           <InfoCard
             label="Sobre a Nexura"
             title="Solucoes digitais com presenca, autoridade e crescimento real."
-            description="A Nexura Tecnologia Ltda nasceu com o objetivo de transformar ideias em solucoes digitais modernas, estrategicas e de alto impacto. Mais do que criar sites ou sistemas, a Nexura desenvolve experiencias digitais pensadas para gerar presenca, autoridade e crescimento real para empresas e marcas."
+            description="Cada projeto e construido com foco em design moderno, performance, posicionamento e resultado."
             items={nexuraServices}
           />
         </motion.div>
@@ -133,7 +131,7 @@ export default function AboutHeitor() {
             <img
               src={heitorCutout}
               alt="Heitor"
-              className="absolute bottom-[-26px] left-1/2 z-10 w-[560px] max-w-none -translate-x-[40%] object-contain drop-shadow-[0_24px_64px_rgba(0,0,0,0.42)] sm:w-[620px]"
+              className="absolute bottom-[-96px] left-1/2 z-10 w-[560px] max-w-none -translate-x-[40%] object-contain drop-shadow-[0_24px_64px_rgba(0,0,0,0.42)] sm:bottom-[-112px] sm:w-[620px]"
             />
 
             <div className="absolute left-5 top-5 rounded-full border border-[#ff3b30]/25 bg-[#ff3b30]/10 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.25em] text-[#ff7d75]">
