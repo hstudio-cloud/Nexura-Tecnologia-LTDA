@@ -20,7 +20,7 @@ const heitorFocus = ['visual premium', 'tecnologia moderna', 'estrategia digital
 
 function InfoCard({ label, title, description, items, ctaLabel, ctaHref }) {
   return (
-    <div className="rounded-[28px] border border-[#ff3b30]/15 bg-gradient-to-br from-[#180a0c] via-[#100d14] to-[#09090c] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.22)] lg:p-7">
+    <div className="rounded-[28px] border border-[#1d4ed8]/18 bg-gradient-to-br from-[#08101f] via-[#0a0f1b] to-[#09090c] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.22)] lg:p-7">
       <h3
         className="mb-3 font-display text-3xl leading-tight text-white sm:text-4xl"
         style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800 }}
@@ -82,17 +82,24 @@ export default function AboutHeitor() {
           transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
           className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16"
         >
-          <div className="relative min-h-[420px] overflow-hidden rounded-[28px] border border-white/5 bg-gradient-to-br from-[#130a0b] via-[#100d14] to-[#09090c]">
-            <div className="absolute right-[10%] top-[14%] h-40 w-40 rounded-full bg-[#ff3b30]/10 blur-3xl" />
+          <div className="relative flex min-h-[420px] items-center justify-center overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(37,99,235,0.18),transparent_44%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_58%_52%,rgba(15,23,42,0.95),transparent_62%)]" />
+            <div className="absolute right-[10%] top-[14%] h-44 w-44 rounded-full bg-[#2563eb]/16 blur-3xl" />
+            <div className="absolute left-[20%] bottom-[14%] h-36 w-36 rounded-full bg-[#0ea5e9]/10 blur-3xl" />
             <img
               src={nexuraMarkHeader}
               alt="Nexura"
-              className="absolute left-1/2 top-1/2 z-10 w-[420px] max-w-none -translate-x-1/2 -translate-y-1/2 object-contain opacity-[0.94] drop-shadow-[0_24px_64px_rgba(0,0,0,0.42)] sm:w-[520px]"
+              className="relative z-10 w-[360px] max-w-none object-contain opacity-[0.98] drop-shadow-[0_24px_64px_rgba(0,0,0,0.42)] sm:w-[430px] lg:w-[500px]"
             />
           </div>
 
           <InfoCard
-            label="Sobre a Nexura"
+            label={
+              <>
+                Sobre a <span className="text-[#ff3b30]">Nexura</span>
+              </>
+            }
             title="Solucoes digitais com presenca, autoridade e crescimento real."
             description="Cada projeto e construido com foco em design moderno, performance, posicionamento e resultado."
             items={nexuraServices}
