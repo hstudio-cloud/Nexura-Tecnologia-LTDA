@@ -18,6 +18,25 @@ const nexuraServices = [
 
 const heitorFocus = ['visual premium', 'tecnologia moderna', 'estrategia digital', 'experiencia do usuario', 'performance']
 
+const extraBenefits = [
+  {
+    title: 'Presenca digital forte',
+    description: 'Sua marca se apresenta com mais autoridade, clareza e profissionalismo em qualquer tela.',
+  },
+  {
+    title: 'Mais confianca para vender',
+    description: 'Sites, sistemas e materiais bem executados aumentam a percepcao de valor e facilitam a decisao.',
+  },
+  {
+    title: 'Processos mais inteligentes',
+    description: 'Automacoes, IA e estrutura digital reduzem retrabalho e deixam a operacao mais eficiente.',
+  },
+  {
+    title: 'Crescimento com estrategia',
+    description: 'Cada entrega da Nexura busca posicionamento, performance e resultado real para o negocio.',
+  },
+]
+
 function InfoCard({ label, title, description, items }) {
   return (
     <div className="relative">
@@ -119,6 +138,116 @@ export default function AboutHeitor() {
               description="Cada projeto e construido com foco em design moderno, performance, posicionamento e resultado."
               items={nexuraServices}
             />
+          </motion.div>
+        </div>
+
+        <div className="relative">
+          <div className="absolute left-1/2 top-0 -z-10 h-full w-screen -translate-x-1/2 bg-[linear-gradient(180deg,#09090c_0%,#05070d_100%)]" />
+          <div className="absolute left-1/2 top-0 -z-10 h-full w-screen -translate-x-1/2 bg-[radial-gradient(circle_at_72%_34%,rgba(37,99,235,0.12),transparent_16%),radial-gradient(circle_at_28%_78%,rgba(59,130,246,0.08),transparent_18%)]" />
+
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.75, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
+            className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16"
+          >
+            <div className="max-w-2xl">
+              <span className="section-label mb-4 block">Informacoes extras</span>
+              <h2
+                className="mb-5 font-display text-3xl font-800 leading-tight text-white sm:text-4xl lg:text-5xl"
+                style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800 }}
+              >
+                Por que isso faz <span className="text-gradient">diferenca?</span>
+              </h2>
+              <p className="mb-8 max-w-xl font-body text-lg leading-relaxed text-white/52">
+                Ter uma estrutura digital bem feita vai muito alem de estar online. Ela influencia a forma como sua
+                marca e percebida, como voce vende e como o negocio cresce.
+              </p>
+
+              <div className="space-y-5">
+                {extraBenefits.map((item, index) => (
+                  <motion.div
+                    key={item.title}
+                    initial={{ opacity: 0, x: -18 }}
+                    animate={inView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ duration: 0.5, delay: 0.14 + index * 0.07, ease: [0.22, 1, 0.36, 1] }}
+                    className="flex gap-4"
+                  >
+                    <div className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-[#2563eb] text-sm font-bold text-white shadow-[0_0_24px_rgba(37,99,235,0.28)]">
+                      ✓
+                    </div>
+                    <div>
+                      <h3
+                        className="mb-1 font-display text-xl text-white"
+                        style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700 }}
+                      >
+                        {item.title}
+                      </h3>
+                      <p className="font-body text-base leading-relaxed text-white/45">{item.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            <div className="relative min-h-[420px] overflow-hidden">
+              <div className="absolute inset-x-[10%] bottom-6 h-[1px] border-b border-dashed border-[#2563eb]/30 [border-image:linear-gradient(90deg,transparent,rgba(37,99,235,0.36),transparent)_1]" />
+              <motion.div
+                initial={{ opacity: 0, y: 30, rotate: -10 }}
+                animate={inView ? { opacity: 1, y: 0, rotate: -12 } : {}}
+                transition={{ duration: 0.7, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+                className="absolute left-[12%] top-[18%] w-[220px] rounded-[28px] border border-white/10 bg-gradient-to-br from-[#10141f] to-[#09090c] p-4 shadow-[0_24px_70px_rgba(0,0,0,0.34)]"
+              >
+                <div className="mb-3 h-36 rounded-[20px] bg-[radial-gradient(circle_at_60%_20%,rgba(255,59,48,0.26),transparent_30%),linear-gradient(180deg,#181d29_0%,#0b0e15_100%)]" />
+                <div className="space-y-2">
+                  <div className="h-2 w-20 rounded-full bg-white/70" />
+                  <div className="h-2 w-28 rounded-full bg-white/20" />
+                  <div className="mt-4 h-10 rounded-2xl bg-[#7c3aed]/18" />
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30, rotate: 8 }}
+                animate={inView ? { opacity: 1, y: 0, rotate: 10 } : {}}
+                transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                className="absolute right-[10%] top-[6%] w-[230px] rounded-[28px] border border-white/10 bg-gradient-to-br from-[#121823] to-[#09090c] p-4 shadow-[0_24px_70px_rgba(0,0,0,0.34)]"
+              >
+                <div className="mb-3 flex h-40 items-end rounded-[20px] bg-[radial-gradient(circle_at_52%_24%,rgba(34,197,94,0.24),transparent_30%),linear-gradient(180deg,#171b24_0%,#0b0e15_100%)] p-4">
+                  <div className="grid gap-2">
+                    <div className="h-2 w-24 rounded-full bg-white/75" />
+                    <div className="h-2 w-16 rounded-full bg-white/25" />
+                  </div>
+                </div>
+                <div className="grid gap-2">
+                  <div className="h-10 rounded-2xl bg-[#22c55e]/14" />
+                  <div className="h-10 rounded-2xl bg-white/[0.03]" />
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.94 }}
+                animate={inView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.65, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                className="absolute bottom-[8%] left-1/2 w-[320px] -translate-x-1/2 rounded-[28px] border border-[#2563eb]/18 bg-gradient-to-br from-[#0d1420] via-[#0b1018] to-[#09090c] p-5 shadow-[0_24px_80px_rgba(0,0,0,0.38)]"
+              >
+                <div className="mb-4 flex items-center justify-between">
+                  <span className="font-mono text-[10px] uppercase tracking-[0.26em] text-[#7dd3fc]">Impacto real</span>
+                  <span className="rounded-full border border-[#2563eb]/25 bg-[#2563eb]/10 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-[#93c5fd]">
+                    Nexura
+                  </span>
+                </div>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  <div className="rounded-2xl border border-white/8 bg-white/[0.03] p-4">
+                    <div className="mb-1 font-display text-2xl text-white">24/7</div>
+                    <div className="font-body text-sm text-white/45">Presenca digital constante</div>
+                  </div>
+                  <div className="rounded-2xl border border-white/8 bg-white/[0.03] p-4">
+                    <div className="mb-1 font-display text-2xl text-white">+ Autoridade</div>
+                    <div className="font-body text-sm text-white/45">Mais confianca na primeira impressao</div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
 
