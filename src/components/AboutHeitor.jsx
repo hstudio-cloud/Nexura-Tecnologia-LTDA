@@ -143,7 +143,12 @@ export default function AboutHeitor() {
 
         <div className="relative">
           <div className="absolute left-1/2 top-0 -z-10 h-full w-screen -translate-x-1/2 bg-[linear-gradient(180deg,#09090c_0%,#05070d_100%)]" />
-          <div className="absolute left-1/2 top-0 -z-10 h-full w-screen -translate-x-1/2 bg-[radial-gradient(circle_at_72%_34%,rgba(37,99,235,0.12),transparent_16%),radial-gradient(circle_at_28%_78%,rgba(59,130,246,0.08),transparent_18%)]" />
+          <div
+            className="absolute left-1/2 top-0 -z-10 h-full w-screen -translate-x-1/2"
+            style={{
+              background: 'radial-gradient(ellipse 60% 80% at 80% 50%, rgba(159,18,57,0.08) 0%, transparent 60%)',
+            }}
+          />
 
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -196,8 +201,20 @@ export default function AboutHeitor() {
               <div className="absolute inset-x-[10%] bottom-6 h-[1px] border-b border-dashed border-[#2563eb]/30 [border-image:linear-gradient(90deg,transparent,rgba(37,99,235,0.36),transparent)_1]" />
               <motion.div
                 initial={{ opacity: 0, y: 30, rotate: -10 }}
-                animate={inView ? { opacity: 1, y: 0, rotate: -12 } : {}}
-                transition={{ duration: 0.7, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+                animate={
+                  inView
+                    ? {
+                        opacity: 1,
+                        y: [0, -14, 0],
+                        rotate: [-12, -9, -12],
+                      }
+                    : {}
+                }
+                transition={{
+                  opacity: { duration: 0.45, delay: 0.12 },
+                  y: { duration: 5.6, delay: 0.12, repeat: Infinity, ease: 'easeInOut' },
+                  rotate: { duration: 5.6, delay: 0.12, repeat: Infinity, ease: 'easeInOut' },
+                }}
                 className="absolute left-[12%] top-[18%] w-[220px] rounded-[28px] border border-white/10 bg-gradient-to-br from-[#10141f] to-[#09090c] p-4 shadow-[0_24px_70px_rgba(0,0,0,0.34)]"
               >
                 <div className="mb-3 h-36 rounded-[20px] bg-[radial-gradient(circle_at_60%_20%,rgba(255,59,48,0.26),transparent_30%),linear-gradient(180deg,#181d29_0%,#0b0e15_100%)]" />
@@ -210,8 +227,20 @@ export default function AboutHeitor() {
 
               <motion.div
                 initial={{ opacity: 0, y: 30, rotate: 8 }}
-                animate={inView ? { opacity: 1, y: 0, rotate: 10 } : {}}
-                transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                animate={
+                  inView
+                    ? {
+                        opacity: 1,
+                        y: [0, 16, 0],
+                        rotate: [10, 7, 10],
+                      }
+                    : {}
+                }
+                transition={{
+                  opacity: { duration: 0.45, delay: 0.2 },
+                  y: { duration: 6.2, delay: 0.2, repeat: Infinity, ease: 'easeInOut' },
+                  rotate: { duration: 6.2, delay: 0.2, repeat: Infinity, ease: 'easeInOut' },
+                }}
                 className="absolute right-[10%] top-[6%] w-[230px] rounded-[28px] border border-white/10 bg-gradient-to-br from-[#121823] to-[#09090c] p-4 shadow-[0_24px_70px_rgba(0,0,0,0.34)]"
               >
                 <div className="mb-3 flex h-40 items-end rounded-[20px] bg-[radial-gradient(circle_at_52%_24%,rgba(34,197,94,0.24),transparent_30%),linear-gradient(180deg,#171b24_0%,#0b0e15_100%)] p-4">
@@ -228,8 +257,20 @@ export default function AboutHeitor() {
 
               <motion.div
                 initial={{ opacity: 0, scale: 0.94 }}
-                animate={inView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.65, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
+                animate={
+                  inView
+                    ? {
+                        opacity: 1,
+                        scale: [1, 1.02, 1],
+                        y: [0, -6, 0],
+                      }
+                    : {}
+                }
+                transition={{
+                  opacity: { duration: 0.45, delay: 0.28 },
+                  scale: { duration: 4.8, delay: 0.28, repeat: Infinity, ease: 'easeInOut' },
+                  y: { duration: 4.8, delay: 0.28, repeat: Infinity, ease: 'easeInOut' },
+                }}
                 className="absolute bottom-[8%] left-1/2 w-[320px] -translate-x-1/2 rounded-[28px] border border-[#2563eb]/18 bg-gradient-to-br from-[#0d1420] via-[#0b1018] to-[#09090c] p-5 shadow-[0_24px_80px_rgba(0,0,0,0.38)]"
               >
                 <div className="mb-4 flex items-center justify-between">
