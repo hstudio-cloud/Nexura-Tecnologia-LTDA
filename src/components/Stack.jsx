@@ -18,12 +18,12 @@ const stackItems = [
 ]
 
 const typeColors = {
-  Frontend: '#00e5ff',
-  Backend: '#2563eb',
-  Design: '#a855f7',
-  Deploy: '#22c55e',
-  Código: '#f59e0b',
-  Projeto: '#f97316',
+  Frontend: '#ff3b30',
+  Backend: '#b91c1c',
+  Design: '#ef4444',
+  Deploy: '#f97316',
+  Código: '#dc2626',
+  Projeto: '#7f1d1d',
   Marketing: '#25d366',
 }
 
@@ -36,7 +36,7 @@ export default function Stack() {
       <div className="absolute inset-0 bg-nexura-black" />
       {/* Separator line top */}
       <div className="absolute top-0 left-0 right-0 h-px"
-        style={{ background: 'linear-gradient(90deg, transparent, rgba(0,229,255,0.15), transparent)' }} />
+        style={{ background: 'linear-gradient(90deg, transparent, rgba(255,59,48,0.18), transparent)' }} />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
@@ -78,7 +78,7 @@ export default function Stack() {
 
       {/* Separator line bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-px"
-        style={{ background: 'linear-gradient(90deg, transparent, rgba(0,229,255,0.15), transparent)' }} />
+        style={{ background: 'linear-gradient(90deg, transparent, rgba(255,59,48,0.18), transparent)' }} />
     </section>
   )
 }

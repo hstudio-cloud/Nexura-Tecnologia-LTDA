@@ -3,8 +3,8 @@ import { useRef } from 'react'
 import { CheckCircle, AlertCircle, ArrowUpRight } from 'lucide-react'
 
 const WA_LINK = 'https://wa.me/5584999422597?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Nexura%20e%20quero%20saber%20sobre%20projetos%20de%20casas.'
-const HOUSE_PURPLE = '#a855f7'
-const HOUSE_PURPLE_SOFT = '#c084fc'
+const HOUSE_PURPLE = '#b91c1c'
+const HOUSE_PURPLE_SOFT = '#ef4444'
 
 const items = [
   'Planta baixa conceitual',

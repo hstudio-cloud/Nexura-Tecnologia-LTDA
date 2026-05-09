@@ -52,7 +52,7 @@ export default function Process() {
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div
         className="absolute inset-0"
-        style={{ background: 'radial-gradient(ellipse 50% 70% at 50% 100%, rgba(37,99,235,0.08) 0%, transparent 60%)' }}
+        style={{ background: 'radial-gradient(ellipse 50% 70% at 50% 100%, rgba(159,18,57,0.10) 0%, transparent 60%)' }}
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
@@ -92,7 +92,7 @@ export default function Process() {
                     <step.icon size={20} className="text-nexura-cyan" />
                   </div>
                   <span className="font-display text-3xl font-800 opacity-[0.12] select-none"
-                    style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, color: '#00e5ff' }}>
+                    style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800, color: '#ff3b30' }}>
                     {step.num}
                   </span>
                 </div>

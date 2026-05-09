@@ -9,7 +9,7 @@ const floatingCards = [
     icon: Globe,
     title: 'Site profissional',
     sub: 'Desde R$ 997',
-    color: '#00e5ff',
+    color: '#ff3b30',
     position: 'top-[18%] right-[5%] lg:right-[8%]',
     animation: 'animate-float',
   },
@@ -17,7 +17,7 @@ const floatingCards = [
     icon: Home,
     title: 'Projeto de casa',
     sub: 'Visualize antes de construir',
-    color: '#2563eb',
+    color: '#9f1239',
     position: 'top-[52%] right-[3%] lg:right-[6%]',
     animation: 'animate-float-delay',
   },
@@ -25,7 +25,7 @@ const floatingCards = [
     icon: Users,
     title: 'Captação de clientes',
     sub: 'Tráfego + WhatsApp',
-    color: '#00e5ff',
+    color: '#ef4444',
     position: 'bottom-[18%] right-[6%] lg:right-[10%]',
     animation: 'animate-float',
   },
@@ -49,12 +49,12 @@ export default function Hero() {
       <div className="absolute inset-0 bg-grid opacity-100" />
       <div
         className="absolute inset-0"
-        style={{ background: 'radial-gradient(ellipse 80% 60% at 50% -5%, rgba(0,229,255,0.10) 0%, transparent 60%)' }}
+        style={{ background: 'radial-gradient(ellipse 80% 60% at 50% -5%, rgba(255,59,48,0.10) 0%, transparent 60%)' }}
       />
       <div className="absolute bottom-0 left-0 right-0 h-64" style={{ background: 'linear-gradient(to bottom, transparent, #06060a)' }} />
 
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full opacity-[0.04] blur-3xl" style={{ background: 'radial-gradient(circle, #00e5ff, transparent)' }} />
-      <div className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full opacity-[0.06] blur-3xl" style={{ background: 'radial-gradient(circle, #2563eb, transparent)' }} />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full opacity-[0.04] blur-3xl" style={{ background: 'radial-gradient(circle, #ff3b30, transparent)' }} />
+      <div className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full opacity-[0.06] blur-3xl" style={{ background: 'radial-gradient(circle, #9f1239, transparent)' }} />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-28 pb-20 lg:pt-36 lg:pb-24 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -120,14 +120,14 @@ export default function Hero() {
               <div className="absolute inset-0 bg-grid opacity-50" />
               <div
                 className="absolute inset-0"
-                style={{ background: 'radial-gradient(ellipse at center, rgba(0,229,255,0.06) 0%, transparent 70%)' }}
+                style={{ background: 'radial-gradient(ellipse at center, rgba(255,59,48,0.08) 0%, transparent 70%)' }}
               />
               <div className="relative z-10 text-center p-8">
                 <div className="mx-auto mb-5 flex justify-center">
                   <img
                     src={nexuraLogo}
                     alt="Nexura Tecnologia LTDA"
-                    className="w-full max-w-[360px] object-contain drop-shadow-[0_0_24px_rgba(0,229,255,0.14)]"
+                    className="w-full max-w-[420px] object-contain drop-shadow-[0_0_24px_rgba(255,59,48,0.16)]"
                   />
                 </div>
                 <p className="font-display text-xl font-700 text-white/90" style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700 }}>

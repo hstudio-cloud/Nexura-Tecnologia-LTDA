@@ -13,7 +13,7 @@ const testimonials = [
     role: 'Empresário local — Assú/RN',
     stars: 5,
     initial: 'C',
-    color: '#00e5ff',
+    color: '#ff3b30',
   },
   {
     text: 'O site ficou moderno e direto para vender. Em menos de uma semana já recebi contatos pelo WhatsApp.',
@@ -21,7 +21,7 @@ const testimonials = [
     role: 'Profissional autônoma',
     stars: 5,
     initial: 'F',
-    color: '#2563eb',
+    color: '#b91c1c',
   },
   {
     text: 'Consegui visualizar minha casa antes mesmo de construir. A planta e a fachada ficaram exatamente como eu imaginava.',
@@ -29,7 +29,7 @@ const testimonials = [
     role: 'Cliente residencial — região de Assú',
     stars: 5,
     initial: 'J',
-    color: '#f59e0b',
+    color: '#f97316',
   },
 ]
 

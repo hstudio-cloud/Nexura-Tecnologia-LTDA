@@ -54,7 +54,7 @@ export default function Manifesto() {
       <div
         className="absolute inset-0"
         style={{
-          background: 'radial-gradient(ellipse 60% 80% at 80% 50%, rgba(37,99,235,0.07) 0%, transparent 60%)',
+          background: 'radial-gradient(ellipse 60% 80% at 80% 50%, rgba(159,18,57,0.08) 0%, transparent 60%)',
         }}
       />
 
@@ -93,7 +93,7 @@ export default function Manifesto() {
           animate={inView ? { opacity: 1, scaleX: 1 } : {}}
           transition={{ duration: 1, delay: 0.5 }}
           className="mt-16 h-px origin-left"
-          style={{ background: 'linear-gradient(90deg, rgba(0,229,255,0.4) 0%, rgba(37,99,235,0.2) 50%, transparent 100%)' }}
+          style={{ background: 'linear-gradient(90deg, rgba(255,59,48,0.45) 0%, rgba(159,18,57,0.24) 50%, transparent 100%)' }}
         />
       </div>
     </section>

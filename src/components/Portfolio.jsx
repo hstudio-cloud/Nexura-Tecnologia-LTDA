@@ -13,8 +13,8 @@ const projects = [
     title: 'StartFit App',
     desc: 'Plataforma digital para academia com controle de mensalidades, treinos personalizados e acompanhamento de evolução do aluno.',
     tech: ['React', 'Node.js', 'Mobile', 'Dashboard'],
-    color: '#00e5ff',
-    gradient: 'from-cyan-500/10 to-blue-600/5',
+    color: '#ff3b30',
+    gradient: 'from-red-500/10 to-rose-900/5',
     num: '01',
   },
   {
@@ -22,8 +22,8 @@ const projects = [
     title: 'Eleitora',
     desc: 'Sistema completo para gestão de prestação de contas eleitorais, com controle de receitas, despesas e relatórios automáticos.',
     tech: ['React', 'Banco de dados', 'PDF', 'Relatórios'],
-    color: '#a855f7',
-    gradient: 'from-purple-500/10 to-purple-900/5',
+    color: '#ef4444',
+    gradient: 'from-rose-500/10 to-red-950/5',
     num: '02',
   },
   {
@@ -31,8 +31,8 @@ const projects = [
     title: 'Casa econômica 8×16m',
     desc: 'Anteprojeto de casa com 2 quartos, suíte, garagem coberta e áreas de serviço. Orçamento preliminar estimado em até R$ 150 mil.',
     tech: ['Planta baixa', 'Fachada 3D', 'Orçamento', 'Cronograma'],
-    color: '#f59e0b',
-    gradient: 'from-amber-500/10 to-amber-900/5',
+    color: '#b91c1c',
+    gradient: 'from-red-700/10 to-red-950/5',
     num: '03',
   },
   {

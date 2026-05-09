@@ -11,7 +11,7 @@ const services = [
     category: 'Digital',
     title: 'Criação de sites profissionais',
     desc: 'Sites modernos, responsivos e focados em resultado — do portfólio à loja online.',
-    color: '#00e5ff',
+    color: '#ff3b30',
     badge: 'Mais pedido',
   },
   {
@@ -19,7 +19,7 @@ const services = [
     category: 'Digital',
     title: 'Landing pages de alta conversão',
     desc: 'Páginas de venda diretas ao ponto, otimizadas para converter visitantes em clientes.',
-    color: '#00e5ff',
+    color: '#ef4444',
     badge: null,
   },
   {
@@ -35,7 +35,7 @@ const services = [
     category: 'Digital',
     title: 'Portfólios e páginas institucionais',
     desc: 'Presença digital completa para profissionais liberais, clínicas e empresas locais.',
-    color: '#00e5ff',
+    color: '#9f1239',
     badge: null,
   },
   {
@@ -43,7 +43,7 @@ const services = [
     category: 'Construção',
     title: 'Projetos de casas',
     desc: 'Anteprojeto com planta conceitual e fachada ilustrativa para quem já tem terreno.',
-    color: '#f59e0b',
+    color: '#dc2626',
     badge: 'Exclusivo Assú/RN',
   },
   {
@@ -51,7 +51,7 @@ const services = [
     category: 'Construção',
     title: 'Orçamento preliminar de obra',
     desc: 'Estimativa de custo com base no projeto, para planejar antes de iniciar a construção.',
-    color: '#f59e0b',
+    color: '#b91c1c',
     badge: null,
   },
   {
@@ -59,7 +59,7 @@ const services = [
     category: 'Construção',
     title: 'Planejamento de obra',
     desc: 'Cronograma básico de execução com etapas, materiais e orientação inicial de obra.',
-    color: '#f59e0b',
+    color: '#7f1d1d',
     badge: null,
   },
   {
@@ -67,15 +67,15 @@ const services = [
     category: 'Marketing',
     title: 'Identidade visual e presença digital',
     desc: 'Criação de marca, logo, paleta e materiais que comunicam profissionalismo.',
-    color: '#a855f7',
+    color: '#f97316',
     badge: null,
   },
 ]
 
 const categoryColor = {
-  Digital: '#00e5ff',
-  Marketing: '#a855f7',
-  Construção: '#f59e0b',
+  Digital: '#ff3b30',
+  Marketing: '#f97316',
+  Construção: '#b91c1c',
 }
 
 function ServiceCard({ service, index }) {

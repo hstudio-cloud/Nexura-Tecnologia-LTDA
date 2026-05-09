@@ -31,7 +31,7 @@ export default function Footer() {
       <div className="absolute inset-0 bg-nexura-dark" />
       <div
         className="absolute top-0 left-0 right-0 h-px"
-        style={{ background: 'linear-gradient(90deg, transparent, rgba(0,229,255,0.12), transparent)' }}
+        style={{ background: 'linear-gradient(90deg, transparent, rgba(255,59,48,0.16), transparent)' }}
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">

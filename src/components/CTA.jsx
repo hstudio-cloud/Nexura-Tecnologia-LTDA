@@ -15,17 +15,17 @@ export default function CTA() {
       <div
         className="absolute inset-0"
         style={{
-          background: 'radial-gradient(ellipse 70% 70% at 50% 50%, rgba(0,229,255,0.07) 0%, transparent 60%)',
+          background: 'radial-gradient(ellipse 70% 70% at 50% 50%, rgba(255,59,48,0.08) 0%, transparent 60%)',
         }}
       />
 
       <div
         className="absolute top-0 left-0 right-0 h-px"
-        style={{ background: 'linear-gradient(90deg, transparent, rgba(0,229,255,0.2), transparent)' }}
+        style={{ background: 'linear-gradient(90deg, transparent, rgba(255,59,48,0.24), transparent)' }}
       />
       <div
         className="absolute bottom-0 left-0 right-0 h-px"
-        style={{ background: 'linear-gradient(90deg, transparent, rgba(0,229,255,0.1), transparent)' }}
+        style={{ background: 'linear-gradient(90deg, transparent, rgba(159,18,57,0.16), transparent)' }}
       />
 
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
