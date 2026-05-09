@@ -18,42 +18,59 @@ const nexuraServices = [
 
 const heitorFocus = ['visual premium', 'tecnologia moderna', 'estrategia digital', 'experiencia do usuario', 'performance']
 
-function InfoCard({ label, title, description, items, ctaLabel, ctaHref }) {
+function InfoCard({ label, title, description, items }) {
   return (
-    <div className="rounded-[28px] border border-[#1d4ed8]/18 bg-gradient-to-br from-[#08101f] via-[#0a0f1b] to-[#09090c] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.22)] lg:p-7">
-      <h3
+    <div className="relative">
+      <motion.h3
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
         className="mb-3 font-display text-3xl leading-tight text-white sm:text-4xl"
         style={{ fontFamily: 'Syne, sans-serif', fontWeight: 800 }}
       >
         {label}
-      </h3>
-      <span className="mb-4 block font-mono text-[10px] uppercase tracking-[0.28em] text-[#ff7d75]">{title}</span>
-      <h3
+      </motion.h3>
+      <motion.span
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.55, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
+        className="mb-4 block font-mono text-[10px] uppercase tracking-[0.28em] text-[#ff7d75]"
+      >
+        {title}
+      </motion.span>
+      <motion.h3
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.55, delay: 0.14, ease: [0.22, 1, 0.36, 1] }}
         className="mb-4 max-w-xl font-display text-2xl leading-tight text-white sm:text-3xl"
         style={{ fontFamily: 'Syne, sans-serif', fontWeight: 700 }}
       >
         {description}
-      </h3>
-      <p className="mb-6 max-w-2xl font-body text-base leading-relaxed text-white/55">
+      </motion.h3>
+      <motion.p
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.55, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        className="mb-6 max-w-2xl font-body text-base leading-relaxed text-white/55"
+      >
         A Nexura Tecnologia Ltda nasceu com o objetivo de transformar ideias em solucoes digitais modernas,
         estrategicas e de alto impacto. Mais do que criar sites ou sistemas, a Nexura desenvolve experiencias digitais
         pensadas para gerar presenca, autoridade e crescimento real para empresas e marcas.
-      </p>
+      </motion.p>
 
       <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-        {items.map((item) => (
-          <div key={item} className="rounded-2xl border border-white/8 bg-black/20 px-4 py-4 font-body text-sm text-white/68">
+        {items.map((item, index) => (
+          <motion.div
+            key={item}
+            initial={{ opacity: 0, y: 26 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.28 + index * 0.06, ease: [0.22, 1, 0.36, 1] }}
+            className="rounded-2xl border border-white/8 bg-black/20 px-4 py-4 font-body text-sm text-white/68 transition-transform duration-300 hover:-translate-y-1"
+          >
             {item}
-          </div>
+          </motion.div>
         ))}
       </div>
-
-      {ctaLabel && ctaHref ? (
-        <a href={ctaHref} target="_blank" rel="noopener noreferrer" className="btn-primary mt-6 inline-flex text-sm">
-          <span>{ctaLabel}</span>
-          <ArrowUpRight size={16} />
-        </a>
-      ) : null}
     </div>
   )
 }
@@ -80,17 +97,19 @@ export default function AboutHeitor() {
           initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-          className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16"
+          className="relative grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16"
         >
+          <div className="absolute inset-0 -z-10 rounded-[36px] bg-[radial-gradient(circle_at_24%_52%,rgba(37,99,235,0.12),transparent_28%),radial-gradient(circle_at_72%_22%,rgba(37,99,235,0.10),transparent_24%),linear-gradient(90deg,rgba(8,12,22,0.92)_0%,rgba(9,9,12,0.84)_42%,rgba(28,10,14,0.22)_100%)]" />
           <div className="relative flex min-h-[420px] items-center justify-center overflow-hidden">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(37,99,235,0.18),transparent_44%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_58%_52%,rgba(15,23,42,0.95),transparent_62%)]" />
             <div className="absolute right-[10%] top-[14%] h-44 w-44 rounded-full bg-[#2563eb]/16 blur-3xl" />
             <div className="absolute left-[20%] bottom-[14%] h-36 w-36 rounded-full bg-[#0ea5e9]/10 blur-3xl" />
-            <img
+            <motion.img
               src={nexuraMarkHeader}
               alt="Nexura"
-              className="relative z-10 w-[360px] max-w-none object-contain opacity-[0.98] drop-shadow-[0_24px_64px_rgba(0,0,0,0.42)] sm:w-[430px] lg:w-[500px]"
+              initial={{ opacity: 0, scale: 0.92, y: 18 }}
+              animate={inView ? { opacity: 0.98, scale: 1, y: 0 } : {}}
+              transition={{ duration: 0.7, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
+              className="relative z-10 w-[360px] max-w-none object-contain drop-shadow-[0_24px_64px_rgba(0,0,0,0.42)] sm:w-[430px] lg:w-[500px]"
             />
           </div>
 
