@@ -39,6 +39,27 @@ const extraBenefits = [
   },
 ]
 
+function PhoneMockup({ image, alt, className = '', screenPosition = 'top' }) {
+  return (
+    <div
+      className={`relative overflow-hidden rounded-[34px] border border-white/18 bg-[#11141c] p-[10px] shadow-[0_26px_80px_rgba(0,0,0,0.42)] ${className}`}
+    >
+      <div className="absolute left-1/2 top-[10px] z-20 h-[24px] w-[110px] -translate-x-1/2 rounded-b-[18px] bg-[#0b0d12]" />
+      <div className="absolute right-[10px] top-[74px] z-20 h-14 w-[3px] rounded-full bg-white/10" />
+      <div className="absolute left-[10px] top-[90px] z-20 h-20 w-[3px] rounded-full bg-white/10" />
+      <div className="relative overflow-hidden rounded-[26px] border border-white/8 bg-[#090b10]">
+        <div
+          className={`h-[420px] bg-cover bg-no-repeat ${screenPosition === 'center' ? 'bg-center' : 'bg-top'}`}
+          style={{ backgroundImage: `url(${image})` }}
+          aria-label={alt}
+          role="img"
+        />
+      </div>
+      <div className="pointer-events-none absolute inset-[10px] rounded-[26px] bg-[linear-gradient(180deg,rgba(255,255,255,0.10)_0%,transparent_18%,transparent_72%,rgba(255,255,255,0.02)_100%)]" />
+    </div>
+  )
+}
+
 function InfoCard({ label, title, description, items }) {
   return (
     <div className="relative">
@@ -217,14 +238,9 @@ export default function AboutHeitor() {
                   y: { duration: 5.6, delay: 0.12, repeat: Infinity, ease: 'easeInOut' },
                   rotate: { duration: 5.6, delay: 0.12, repeat: Infinity, ease: 'easeInOut' },
                 }}
-                className="absolute left-[12%] top-[18%] w-[220px] rounded-[28px] border border-white/10 bg-gradient-to-br from-[#10141f] to-[#09090c] p-3 shadow-[0_24px_70px_rgba(0,0,0,0.34)]"
+                className="absolute left-[12%] top-[18%] w-[220px]"
               >
-                <div className="overflow-hidden rounded-[22px] border border-white/8 bg-[#0b0e15]">
-                  <div
-                    className="h-[250px] bg-cover bg-top bg-no-repeat"
-                    style={{ backgroundImage: `url(${nanoPreview})` }}
-                  />
-                </div>
+                <PhoneMockup image={nanoPreview} alt="Preview do Nano IA" />
               </motion.div>
 
               <motion.div
@@ -243,14 +259,9 @@ export default function AboutHeitor() {
                   y: { duration: 6.2, delay: 0.2, repeat: Infinity, ease: 'easeInOut' },
                   rotate: { duration: 6.2, delay: 0.2, repeat: Infinity, ease: 'easeInOut' },
                 }}
-                className="absolute right-[10%] top-[6%] w-[230px] rounded-[28px] border border-white/10 bg-gradient-to-br from-[#121823] to-[#09090c] p-3 shadow-[0_24px_70px_rgba(0,0,0,0.34)]"
+                className="absolute right-[10%] top-[6%] w-[230px]"
               >
-                <div className="overflow-hidden rounded-[22px] border border-white/8 bg-[#0b0e15]">
-                  <div
-                    className="h-[270px] bg-cover bg-top bg-no-repeat"
-                    style={{ backgroundImage: `url(${startfitPreview})` }}
-                  />
-                </div>
+                <PhoneMockup image={startfitPreview} alt="Preview do StartFit App" screenPosition="center" />
               </motion.div>
 
               <motion.div
