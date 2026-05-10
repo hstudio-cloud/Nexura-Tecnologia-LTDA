@@ -219,9 +219,9 @@ export default function AboutHeitor() {
             </div>
 
             <div className="relative min-h-[420px] overflow-hidden">
-              <div className="absolute inset-x-[8%] inset-y-[8%] rounded-[34px] bg-[linear-gradient(180deg,#102a68_0%,#0a1638_58%,#09111f_100%)] shadow-[0_24px_80px_rgba(0,0,0,0.34)]" />
-              <div className="absolute inset-x-[10%] inset-y-[10%] rounded-[30px] border border-[#60a5fa]/16 bg-[radial-gradient(circle_at_50%_24%,rgba(96,165,250,0.18),transparent_24%),linear-gradient(180deg,rgba(7,15,32,0.12)_0%,rgba(7,15,32,0.02)_100%)]" />
-              <div className="absolute inset-x-[10%] bottom-6 h-[1px] border-b border-dashed border-[#2563eb]/30 [border-image:linear-gradient(90deg,transparent,rgba(37,99,235,0.36),transparent)_1]" />
+              <div className="absolute inset-x-[8%] inset-y-[8%] rounded-[34px] bg-[linear-gradient(180deg,#5f1018_0%,#2b0c12_58%,#14090c_100%)] shadow-[0_24px_80px_rgba(0,0,0,0.34)]" />
+              <div className="absolute inset-x-[10%] inset-y-[10%] rounded-[30px] border border-[#ff7d75]/16 bg-[radial-gradient(circle_at_50%_24%,rgba(255,125,117,0.18),transparent_24%),linear-gradient(180deg,rgba(38,9,12,0.18)_0%,rgba(20,9,12,0.04)_100%)]" />
+              <div className="absolute inset-x-[10%] bottom-6 h-[1px] border-b border-dashed border-[#ff3b30]/25 [border-image:linear-gradient(90deg,transparent,rgba(255,59,48,0.32),transparent)_1]" />
               <motion.div
                 initial={{ opacity: 0, y: 30, rotate: -10 }}
                 animate={
@@ -264,41 +264,6 @@ export default function AboutHeitor() {
                 <PhoneMockup image={startfitPreview} alt="Preview do StartFit App" screenPosition="center" />
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.94 }}
-                animate={
-                  inView
-                    ? {
-                        opacity: 1,
-                        scale: [1, 1.02, 1],
-                        y: [0, -6, 0],
-                      }
-                    : {}
-                }
-                transition={{
-                  opacity: { duration: 0.45, delay: 0.28 },
-                  scale: { duration: 4.8, delay: 0.28, repeat: Infinity, ease: 'easeInOut' },
-                  y: { duration: 4.8, delay: 0.28, repeat: Infinity, ease: 'easeInOut' },
-                }}
-                className="absolute bottom-[8%] left-1/2 w-[320px] -translate-x-1/2 rounded-[28px] border border-[#2563eb]/18 bg-gradient-to-br from-[#0d1420] via-[#0b1018] to-[#09090c] p-5 shadow-[0_24px_80px_rgba(0,0,0,0.38)]"
-              >
-                <div className="mb-4 flex items-center justify-between">
-                  <span className="font-mono text-[10px] uppercase tracking-[0.26em] text-[#7dd3fc]">Impacto real</span>
-                  <span className="rounded-full border border-[#2563eb]/25 bg-[#2563eb]/10 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-[#93c5fd]">
-                    Nexura
-                  </span>
-                </div>
-                <div className="grid gap-3 sm:grid-cols-2">
-                  <div className="rounded-2xl border border-white/8 bg-white/[0.03] p-4">
-                    <div className="mb-1 font-display text-2xl text-white">24/7</div>
-                    <div className="font-body text-sm text-white/45">Presenca digital constante</div>
-                  </div>
-                  <div className="rounded-2xl border border-white/8 bg-white/[0.03] p-4">
-                    <div className="mb-1 font-display text-2xl text-white">+ Autoridade</div>
-                    <div className="font-body text-sm text-white/45">Mais confianca na primeira impressao</div>
-                  </div>
-                </div>
-              </motion.div>
             </div>
           </motion.div>
         </div>
