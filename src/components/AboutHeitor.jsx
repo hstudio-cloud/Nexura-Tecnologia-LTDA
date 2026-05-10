@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, Instagram } from 'lucide-react'
 import heitorCutout from '../assets/heitor-cutout.png'
 import nexuraMarkHeader from '../assets/nexura-mark-header.png'
 import nanoPreview from '../assets/site-previews/nano-preview.png'
@@ -8,6 +8,7 @@ import startfitPreview from '../assets/site-previews/startfit-preview.png'
 
 const WA_LINK =
   'https://wa.me/5584999422597?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Nexura%20e%20quero%20falar%20com%20Heitor.'
+const INSTAGRAM_LINK = 'https://www.instagram.com/heitorslv._/'
 
 const nexuraServices = [
   'Desenvolvimento de sites profissionais',
@@ -363,10 +364,21 @@ export default function AboutHeitor() {
                   para transformar negocios em presenca digital forte.
                 </p>
 
-                <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary text-sm">
-                  <span>Falar com Heitor</span>
-                  <ArrowUpRight size={16} />
-                </a>
+                <div className="flex flex-wrap gap-3">
+                  <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary text-sm">
+                    <span>Falar com Heitor</span>
+                    <ArrowUpRight size={16} />
+                  </a>
+                  <a
+                    href={INSTAGRAM_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-[#ff3b30]/30 hover:bg-[#ff3b30]/10"
+                  >
+                    <Instagram size={16} />
+                    <span>Instagram</span>
+                  </a>
+                </div>
               </div>
             </div>
           </motion.div>
